@@ -15,6 +15,22 @@
       "required": false
     }]
   },
+  "DELETE": {
+    "name": "delete",
+    "description": "[DEV] - Delete a command.",
+    "options": [{
+        "name": "guild",
+        "description": "[DEV] - Delete a command in this guild.",
+        "type": 3,
+        "required": false
+      },
+      {
+        "name": "global",
+        "description": "[DEV] - Delete a command for all guilds.",
+        "type": 3,
+        "required": false
+      }]
+  },
   "PING": {
     "name": "ping",
     "description": "Ping! Pong!"
