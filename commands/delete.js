@@ -8,11 +8,13 @@ module.exports.run = async (client, inter, args, guild, send, msg) => {
     let gui = await client.api.applications(client.user.id).guilds(guild.id).commands.get()
     let id = getCommandId(gui, value)
     if (!id) return;
+    client.api.applications(client.user.id).guilds(guild.id).commands(id).delete()
   }
   if (type == 'global') {
     let glo = await client.api.applications(client.user.id).commands.get()
     let id = getCommandId(glo, value)
     if (!id) return;
+    client.api.applications(client.user.id).commands(id).delete()
   }
 
   function getCommandId(arr, name) {
