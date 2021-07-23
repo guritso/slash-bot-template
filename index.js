@@ -7,4 +7,7 @@ client.login(config.token)
 client.on('ready', () => {console.log(`${client.user.tag} online`)})
 
 client.ws.on('INTERACTION_CREATE', async inter => {
+  
+  const guild = client.guilds.cache.find(gu => gu.id == inter.guild_id)
+  
 })
