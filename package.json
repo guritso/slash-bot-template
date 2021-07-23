@@ -1,5 +1,5 @@
 {
-  "name": "slash",
+  "name": "slash-bot-template",
   "version": "1.0.0",
   "description": "A discord bot with slash commands",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gurizenit/slash.git"
+    "url": "git+https://github.com/gurizenit/slash-bot-template.git"
   },
   "author": "GuriZenit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gurizenit/slash/issues"
+    "url": "https://github.com/gurizenit/slash-bot-template/issues"
   },
-  "homepage": "https://github.com/gurizenit/slash#readme",
+  "homepage": "https://github.com/gurizenit/slash-bot-template#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0"

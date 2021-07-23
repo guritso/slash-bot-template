@@ -1,4 +1,4 @@
-# Slash bot
+# Slash bot template
 A bot with a easy way to add slass commands!
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/GuriZenit/slash)
@@ -7,7 +7,7 @@ A bot with a easy way to add slass commands!
 > Add slash commands from json file!
 
 ## Example
-Let's suppose we have this PING command in `/options/commands.json` file:
+Let's suppose we have this PING command in `/options/commands.json`:
 ```json
 {
   "PING": {
@@ -30,7 +30,7 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 To start adding commands for your bot first you need to add the `/add` command, then we use it to add the `/delete` command!
 
-To add the `/add` command put this code inside the READY event in `index.js` file with your guild id, remembering that it will only be used once.
+To add the `/add` command put this code inside the READY event in `index.js` with your guild id, remembering that it will only be used once.
 ```javascript
 const json = require('./options/commands.json')
 
