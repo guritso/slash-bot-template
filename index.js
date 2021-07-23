@@ -12,4 +12,10 @@ client.ws.on('INTERACTION_CREATE', async inter => {
   const command = inter.data.name.toLowerCase()
   const args = inter.data.options;
   
+  try {
+    let commandFile = require(`./commands/${command}.js`).run(client, inter, args, guild, send)
+  }catch(err){
+    console.log(err)
+  }
+  
 })
