@@ -17,9 +17,11 @@ Let's suppose we have this PING command in `options/commands.json` file:
 }
 ```
 Having this we just need to use the guild `add` command, and you can choose if it will be a guild or global command:
+
 ![](https://i.imgur.com/JIpedAR.jpg)
 
 To remove the command that we just added we just use `delete` like `add` command:
+
 ![](https://i.imgur.com/V3Foc5m.jpg)
 > This doesn't change anything in json file!
 
