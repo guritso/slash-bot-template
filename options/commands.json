@@ -1,0 +1,6 @@
+{
+  "PING": {
+    "name": "ping",
+    "description": "Ping! Pong!"
+  }
+}
