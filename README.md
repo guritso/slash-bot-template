@@ -1,12 +1,13 @@
 # Slash
 A bot with a easy way to add slass commands!
+
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/GuriZenit/slash)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/GuriZenit/Slash)
 ![GitHub](https://img.shields.io/github/license/GuriZenit/slash?color=blue)
 > Add slash commands from json file!
 
 ## Example
-Let's suppose we have this a PING command in options/commands.json file:
+Let's suppose we have this PING command in options/commands.json file:
 ```json
 {
   "PING": {
