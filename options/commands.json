@@ -1,4 +1,20 @@
 {
+  "ADD": {
+    "name": "add",
+    "description": "[DEV] - Add a command from commands.json file.",
+    "options": [{
+      "name": "guild",
+      "description": "[DEV] - Add a command in this guild.",
+      "type": 3,
+      "required": false
+    },
+    {
+      "name": "global",
+      "description": "[DEV] - Add a command for all guilds.",
+      "type": 3,
+      "required": false
+    }]
+  },
   "PING": {
     "name": "ping",
     "description": "Ping! Pong!"
