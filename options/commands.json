@@ -31,6 +31,16 @@
         "required": false
       }]
   },
+  "AVATAR": {
+    "name": "avatar",
+    "description": "Show your discord avatar!",
+    "options": [{
+      "name": "user",
+      "description": "Show someone's discord avatar!",
+      "type": 6,
+      "required": false
+      }]
+  },
   "PING": {
     "name": "ping",
     "description": "Ping! Pong!"
