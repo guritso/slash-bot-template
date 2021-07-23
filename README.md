@@ -7,7 +7,7 @@ A bot with a easy way to add slass commands!
 > Add slash commands from json file!
 
 ## Example
-Let's suppose we have this PING command in options/commands.json file:
+Let's suppose we have this PING command in `options/commands.json` file:
 ```json
 {
   "PING": {
