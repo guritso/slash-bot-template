@@ -1,4 +1,4 @@
-# Slash
+# Slash bot
 A bot with a easy way to add slass commands!
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/GuriZenit/slash)
@@ -20,7 +20,7 @@ Having this we just need to use the guild `add` command, and you can choose if i
 
 ![](https://i.imgur.com/JIpedAR.jpg)
 
-To remove the command that we just added we just use `delete` like `add` command:
+To remove the PING command we just need to use `delete` like `add` command:
 
 ![](https://i.imgur.com/V3Foc5m.jpg)
 > This doesn't change anything in json file!
