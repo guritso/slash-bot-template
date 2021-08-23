@@ -5,7 +5,8 @@ A bot with a easy way to add slass commands!
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/GuriZenit/Slash)
 ![GitHub](https://img.shields.io/github/license/GuriZenit/slash?color=blue)
 > Add slash commands from json file!
-> This only for version 12.x of discord.js
+
+> This is only for version 12.x of discord.js
 ## Example
 Let's suppose we have this PING command in `/options/commands.json`:
 ```json
