@@ -1,0 +1,66 @@
+{
+  "ADD": {
+    "name": "add",
+    "description": "[DEV] - Add a command from commands.json file.",
+    "options": [{
+      "name": "guild",
+      "description": "[DEV] - Add a command in this guild.",
+      "type": 3,
+      "required": false
+    },
+    {
+      "name": "global",
+      "description": "[DEV] - Add a command for all guilds.",
+      "type": 3,
+      "required": false
+    }]
+  },
+  "DELETE": {
+    "name": "delete",
+    "description": "[DEV] - Delete a command.",
+    "options": [{
+        "name": "guild",
+        "description": "[DEV] - Delete a command in this guild.",
+        "type": 3,
+        "required": false
+      },
+      {
+        "name": "global",
+        "description": "[DEV] - Delete a command for all guilds.",
+        "type": 3,
+        "required": false
+      }]
+  },
+  "AVATAR": {
+    "name": "avatar",
+    "description": "Show your discord avatar!",
+    "options": [{
+      "name": "user",
+      "description": "Show someone's discord avatar!",
+      "type": 6,
+      "required": false
+      }]
+  },
+  "PING": {
+    "name": "ping",
+    "description": "Ping! Pong!"
+  },
+  "TEST": {
+    "name": "test",
+    "description": "testin something",
+    "options": [{
+      "name": "opi" ,
+      "description": "desc op",
+      "type": 3,
+      "required": true,
+      "choices": [{
+        "name": "choice 1",
+        "value": "choise_one"
+      },
+      {
+       "name": "choice 2",
+        "value": "choice_two"
+      }]
+    }]
+  }
+}
