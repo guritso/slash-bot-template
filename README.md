@@ -1,4 +1,4 @@
-# Slash bot template
+# SCDB
 A bot with a easy way to add slass commands!
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/GuriZenit/slash)
