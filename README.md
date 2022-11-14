@@ -1,9 +1,9 @@
 # SCDB
 A bot with a easy way to add slass commands!
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/GuriZenit/slash)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/GuriZenit/Slash)
-![GitHub](https://img.shields.io/github/license/GuriZenit/slash?color=blue)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/GuriZenit/Slash-Commands-Discord-Bot/discord.js?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/GuriZenit/Slash?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/GuriZenit/Slash-Commands-Discord-Bot?color=blue&style=for-the-badge)
 > Add slash commands from json file!
 
 ## Example
