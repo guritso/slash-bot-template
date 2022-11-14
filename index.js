@@ -1,5 +1,5 @@
-const {Client, GatewayIntentBits} = require('discord.js')
-const config = require('./config.json')
+const { Client, GatewayIntentBits } = require('discord.js')
+const config = require('./config.js')
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
 })
