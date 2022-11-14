@@ -14,5 +14,5 @@ module.exports.run = async(client, inter, guild) => {
   })
   .setColor('#00FFAA')
  
-  inter.reply({ embeds:[ embed ]})
+  await inter.reply({ embeds:[ embed ]})
 }
