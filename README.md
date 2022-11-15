@@ -1,4 +1,4 @@
-# SCDB
+# Slash Commands bot
 A bot with a easy way to add slash commands!
 
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/GuriZenit/Slash-Commands-Discord-Bot/discord.js/main?style=for-the-badge)
