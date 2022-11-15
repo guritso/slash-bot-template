@@ -7,7 +7,7 @@ A bot with a easy way to add slash commands!
 > Add slash commands from a json file!
 
 ## Example
-Let's suppose we have this PING command in `/options/commands.json`:
+Let's suppose we have this PING command in `/slash/commands.json`:
 ```json
 {
   "PING": {
@@ -40,7 +40,7 @@ lets start using the bot, You can use the command:
 ```
 it will add the `/delete` command like we saw on Example.
 
-Everything command you want to add just edit the `/options/commands.json` using the following style:
+Everything command you want to add just edit the `/slash/commands.json` using the following style:
 ```json
 "COMMAND1": {
   "name": "command1",
