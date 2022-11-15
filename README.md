@@ -27,21 +27,18 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 ## Usage
 
-To start adding commands for your bot first you need to add the `/add` command, then we use it to add the `/delete` command!
-
-To add the `/add` command put this code inside the READY event in `index.js` with your guild id, remembering that it will only be used once.
+First you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, then run `node start.js` or you can use it on a ready event in the `/index.js`:
 ```javascript
-const json = require('./options/commands.json')
-
-client.api.applications(client.user.id)
-    .guilds('YOUR GUILD ID')
-    .commands.post({data: json['ADD']})
+require('./start.js')
 ```
-Now you can use the command:
+> you just need to use once
+
+Now you have the first command `add`,
+lets start using the bot, You can use the command:
 ```
 /add guild: DELETE
 ```
-to add the `/delete` command like we saw on Example.
+it will add the `/delete` command like we saw on Example.
 
 Everything command you want to add just edit the `/options/commands.json` using the following style:
 ```json
