@@ -11,6 +11,6 @@ const clientID = 'BOT_ID_HERE'
 async () => {
   const rest = await new REST({ version: '10' }).setToken(token)
   
-  await rest.post(Route.applicationGuildCommand(guildID,clientID)),
-  { body: json['ADD'] }
+  await rest.post(Route.applicationGuildCommand(guildID,clientID),
+  { body: json['ADD'] })
 };
