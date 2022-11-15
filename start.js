@@ -8,7 +8,7 @@ const { token } = require('./config.js')
 const json = require('./slash/commands.json')
 const guildID = 'GUILD_ID_HERE'
 const clientID = 'BOT_ID_HERE'
-const rest = await new REST({ version: '10' }).setToken(token)
+const rest = new REST({ version: '10' }).setToken(token)
 
 (async () => {
   console.log('adding first command...')
