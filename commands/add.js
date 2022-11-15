@@ -11,7 +11,7 @@ module.exports.run = async(client, inter, guild) => {
   
   if(!json[value]){
     return await inter.reply({
-      content: "✖️ | command not found",
+      content: "Command not found ×",
       ephemeral: true
     })
   }
@@ -27,7 +27,7 @@ module.exports.run = async(client, inter, guild) => {
       {body: json[value]})
   }
   await inter.reply({
-    content: `➕ | command ${value} added`,
+    content: `Command ${value} added ✓`,
     ephemeral: true
   })
 }
