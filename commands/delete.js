@@ -4,19 +4,21 @@ module.exports.run = async(client, inter, guild) => {
   
   const rest = new REST({ version: '10'}).setToken(token)
   const type = inter.options._hoistedOptions[0].name;
-  const value = inter.options.getString(type).toLowerCase()
+  const name = inter.options.getString(type).toLowerCase()
   
   if(type == 'guild'){
-    let gui = await client.api.applications(client.user.id).guilds(guild.id).commands.get()
-    let id = getCommandId(gui, value)
+    const command = await guild.commands.fetch()
+    const arr = command.toJSON()
+    const id = getCommandId(arr, name)
     if(!id) return;
-    rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, 'id'))
+    rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, id))
   }
   if(type == 'global'){
-    let glo = await client.api.applications(client.user.id).commands.get()
-    let id = getCommandId(glo, value)
+    const command = await client.application.commands.fetch()
+    const arr = command.toJSON()
+    const id = getCommandId(arr, name)
     if(!id) return;
-    rest.delete(Routes.applicationCommand(client.user.id, 'id'))
+    rest.delete(Routes.applicationCommand(client.user.id, id))
   }
   
   function getCommandId(arr, name){
