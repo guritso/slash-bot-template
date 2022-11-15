@@ -17,12 +17,12 @@ module.exports.run = async(client, inter, guild) => {
   }
   
   if(type == 'guild'){
-    await rest.put(
+    await rest.post(
      Routes.applicationGuildCommands(client.user.id, guild.id),
     { body: json[value] })
   }
   if(type == 'global'){
-    await rest.put(
+    await rest.post(
       Routes.applicationCommands(client.user.id),
       {body: json[value]})
   }
