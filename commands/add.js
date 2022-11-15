@@ -1,4 +1,4 @@
-const json = require('../options/commands.json')
+const json = require('../slash/commands.json')
 const { REST, Routes } = require ('discord.js')
 const { token }= require('../config.js')
 module.exports.run = async(client, inter, guild) => {

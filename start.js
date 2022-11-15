@@ -5,7 +5,7 @@
 /*/ or add `require(./start.js)` on a ready envet in the index.js in case you're not in a terminal /*/
 const { REST, Routes } = require('discord.js')
 const { token } = require('./config.js')
-const json = require('./options/commands.json')
+const json = require('./slash/commands.json')
 const guildID = 'GUILD_ID_HERE'
 const clientID = 'BOT_ID_HERE'
 async () => {
