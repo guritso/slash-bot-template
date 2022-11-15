@@ -1,32 +1,32 @@
 {
   "ADD": {
     "name": "add",
-    "description": "[DEV] - Add a command from commands.json file.",
+    "description": "Add a command from commands.json file.",
     "options": [{
       "name": "guild",
-      "description": "[DEV] - Add a command in this guild.",
+      "description": "Add a command in this guild.",
       "type": 3,
       "required": false
     },
     {
       "name": "global",
-      "description": "[DEV] - Add a command for all guilds.",
+      "description": "Add a command on all guilds.",
       "type": 3,
       "required": false
     }]
   },
   "DELETE": {
     "name": "delete",
-    "description": "[DEV] - Delete a command.",
+    "description": "Delete a command.",
     "options": [{
         "name": "guild",
-        "description": "[DEV] - Delete a command in this guild.",
+        "description": "Delete a command in this guild.",
         "type": 3,
         "required": false
       },
       {
         "name": "global",
-        "description": "[DEV] - Delete a command for all guilds.",
+        "description": "Delete a command on all guilds.",
         "type": 3,
         "required": false
       }]
