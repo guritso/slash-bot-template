@@ -25,14 +25,14 @@ module.exports.run = async(client, inter, guild) => {
     for(i in arr){
       if(arr[i].name === name){
         inter.reply({
-          content:`➖ | command ${value} removed`,
+          content:`Command ${name} removed ✓`,
           ephemeral: true
         })
         return arr[i].id;
       }
     }
     inter.reply({
-      content: "✖️ | command not found",
+      content: "Command not found ×",
       ephemeral: true
     })
   }
