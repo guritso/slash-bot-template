@@ -15,9 +15,20 @@ module.exports.run = async (client, inter, guild) => {
     const arr = command.toJSON()
     const id = getCommandId(arr, name)
 
-    if (!id) return;
+    if (!id) {
+      return inter.reply({
+        content: "command not found",
+        ephemeral: true
+      })
+    }
     // delete the command
     rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, id))
+    
+    inter.reply({
+      content: `command ${name} deleted`,
+      ephemeral: true
+    })
+  }
   }
   if (type == 'global_command') {
     // get all global commands
@@ -33,7 +44,7 @@ module.exports.run = async (client, inter, guild) => {
       })
     }
     // delete the command
-    rest.delete(Routes.applicationCommand(client.user.id, id)).then
+    rest.delete(Routes.applicationCommand(client.user.id, id))
 
     inter.reply({
       content: `command ${name} deleted`,
