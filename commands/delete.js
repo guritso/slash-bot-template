@@ -13,7 +13,6 @@ module.exports.run = async(client, inter, guild) => {
     const command = await guild.commands.fetch()
     // parse to JSON
     const arr = command.toJSON()
-    
     const id = getCommandId(arr, name)
     
     if(!id) return;
@@ -25,27 +24,29 @@ module.exports.run = async(client, inter, guild) => {
     const command = await client.application.commands.fetch()
     // parse to JSON
     const arr = command.toJSON()
-    
     const id = getCommandId(arr, name)
-    
-    if(!id) return;
+    // check id
+    if(!id){
+      return inter.reply({
+        content: "command not found",
+        ephemeral: true
+      })
+    }
     // delete the command
-    rest.delete(Routes.applicationCommand(client.user.id, id))
+    rest.delete(Routes.applicationCommand(client.user.id, id)).then
+    
+    inter.reply({
+      content: `command ${name} deleted`,
+      ephemeral: true
+    })
   }
   /*/ simple function to get the id of a command, using the name and the array (parsed to JSON) /*/
   function getCommandId(arr, name){
     for(i in arr){
       if(arr[i].name === name){
-        inter.reply({
-          content:`Command ${name} removed ✓`,
-          ephemeral: true
-        })
         return arr[i].id;
       }
     }
-    inter.reply({
-      content: "Command not found ×",
-      ephemeral: true
-    })
+    return null;
   }
 }
