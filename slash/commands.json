@@ -15,6 +15,30 @@
       "required": false
     }]
   },
+  "ADDBETA": {
+    "name": "addbeta",
+    "description": "add a command",
+    "options": [{
+      "name": "name",
+      "description": "choose the command name",
+      "type": 3,
+      "required": true
+    },
+    {
+      "name": "type",
+      "description": "choose where the command should appear",
+      "type": 3,
+      "required": true,
+      "choices": [{
+        "name": "guild command",
+        "value": "guild"
+      },
+      {
+        "name": "global command",
+        "value": "global"
+      }]
+    }]
+  },
   "DELETE": {
     "name": "delete",
     "description": "Delete a command.",
@@ -55,10 +79,12 @@
       "required": true,
       "choices": [{
         "name": "choice 1",
+        "description": "you choos one",
         "value": "choise_one"
       },
       {
        "name": "choice 2",
+       "type": 3,
         "value": "choice_two"
       }]
     }]
