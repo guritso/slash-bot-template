@@ -4,11 +4,11 @@ module.exports.run = async(client, inter, guild) => {
   
   const rest = new REST({ version: '10'}).setToken(token)
   // get the type of the command guild/global
-  const type = inter.options._hoistedOptions[0].name;
+  const type = inter.options.getString("type")
   // get the input (command name)
-  const name = inter.options.getString(type).toLowerCase()
+  const name = inter.options.getString("name").toLowerCase()
   
-  if(type == 'guild'){
+  if(type == 'guild_command'){
     // get all guild commands
     const command = await guild.commands.fetch()
     // parse to JSON
@@ -20,7 +20,7 @@ module.exports.run = async(client, inter, guild) => {
     // delete the command
     rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, id))
   }
-  if(type == 'global'){
+  if(type == 'global_command'){
     // get all global commands
     const command = await client.application.commands.fetch()
     // parse to JSON
