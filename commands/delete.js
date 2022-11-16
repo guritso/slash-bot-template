@@ -1,7 +1,7 @@
 const { REST, Routes } = require('discord.js')
 const { token } = require('../config.js')
 module.exports.run = async (client, inter, guild) => {
-
+  
   const rest = new REST({ version: '10' }).setToken(token)
   // get the type of the command guild/global
   const type = inter.options.getString("type")
@@ -28,7 +28,6 @@ module.exports.run = async (client, inter, guild) => {
       content: `command ${name} deleted`,
       ephemeral: true
     })
-  }
   }
   if (type == 'global_command') {
     // get all global commands
