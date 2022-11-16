@@ -4,7 +4,6 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds]
 })
 
-client.login(config.token)
 client.on('ready', () => {
   console.log(`${client.user.tag} online`)
   client.user.setPresence({
@@ -28,3 +27,5 @@ client.on('interactionCreate', async inter => {
     console.log(err)
   }
 })
+
+client.login(config.token)

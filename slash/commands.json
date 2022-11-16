@@ -2,24 +2,24 @@
   "ADD": {
     "name": "add",
     "description": "add a command",
-  "options": [{
-      "name": "name",
-      "description": "put the name of the command to add",
-      "type": 3,
-      "required": true
+    "options": [{
+        "name": "name",
+        "description": "put the name of the command to add",
+        "type": 3,
+        "required": true
       },
-    {
-      "name": "type",
-      "description": "choose the type of the command to add",
-      "type": 3,
-      "required": true,
-      "choices": [{
-          "name": "guild",
-          "value": "guild_command"
+      {
+        "name": "type",
+        "description": "choose the type of the command to add",
+        "type": 3,
+        "required": true,
+        "choices": [{
+            "name": "guild",
+            "value": "guild_command"
         },
-        {
-          "name": "global",
-          "value": "global_command"
+          {
+            "name": "global",
+            "value": "global_command"
         }]
       }]
   },
@@ -27,23 +27,23 @@
     "name": "delete",
     "description": "Delete a command.",
     "options": [{
-      "name": "name",
-      "description": "put the name of the command to delete",
-      "type": 3,
-      "required": true
+        "name": "name",
+        "description": "put the name of the command to delete",
+        "type": 3,
+        "required": true
         },
-    {
-      "name": "type",
-      "description": "choose the type of the command to delete",
-      "type": 3,
-      "required": true,
-      "choices": [{
-          "name": "guild",
-          "value": "guild_command"
+      {
+        "name": "type",
+        "description": "choose the type of the command to delete",
+        "type": 3,
+        "required": true,
+        "choices": [{
+            "name": "guild",
+            "value": "guild_command"
           },
-        {
-          "name": "global",
-          "value": "global_command"
+          {
+            "name": "global",
+            "value": "global_command"
           }]
         }]
   },
@@ -59,25 +59,25 @@
   },
   "PING": {
     "name": "ping",
-    "description": "answer pong!"
+    "description": "answer pong"
   },
   "TEST": {
     "name": "test",
     "description": "testin something",
     "options": [{
-      "name": "opi" ,
+      "name": "opi",
       "description": "desc op",
       "type": 3,
       "required": true,
       "choices": [{
-        "name": "choice 1",
-        "description": "you choos one",
-        "value": "choise_one"
+          "name": "choice 1",
+          "description": "you choos one",
+          "value": "choise_one"
       },
-      {
-       "name": "choice 2",
-       "type": 3,
-        "value": "choice_two"
+        {
+          "name": "choice 2",
+          "type": 3,
+          "value": "choice_two"
       }]
     }]
   }
