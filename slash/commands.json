@@ -1,43 +1,27 @@
 {
   "ADD": {
     "name": "add",
-    "description": "Add a command from commands.json file.",
-    "options": [{
-      "name": "guild",
-      "description": "Add a command in this guild.",
-      "type": 3,
-      "required": false
-    },
-    {
-      "name": "global",
-      "description": "Add a command on all guilds.",
-      "type": 3,
-      "required": false
-    }]
-  },
-  "ADDBETA": {
-    "name": "addbeta",
     "description": "add a command",
-    "options": [{
+  "options": [{
       "name": "name",
-      "description": "choose the command name",
+      "description": "put the name of the command",
       "type": 3,
       "required": true
-    },
+      },
     {
       "name": "type",
-      "description": "choose where the command should appear",
+      "description": "choose the type of the command",
       "type": 3,
       "required": true,
       "choices": [{
-        "name": "guild command",
-        "value": "guild"
-      },
-      {
-        "name": "global command",
-        "value": "global"
+          "name": "Guild",
+          "value": "guild_command"
+        },
+        {
+          "name": "Global",
+          "value": "global_command"
+        }]
       }]
-    }]
   },
   "DELETE": {
     "name": "delete",
