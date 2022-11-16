@@ -49,17 +49,17 @@
   },
   "AVATAR": {
     "name": "avatar",
-    "description": "Show your discord avatar!",
+    "description": "show your and other avatars",
     "options": [{
       "name": "user",
-      "description": "Show someone's discord avatar!",
+      "description": "choose a user",
       "type": 6,
       "required": false
       }]
   },
   "PING": {
     "name": "ping",
-    "description": "Ping! Pong!"
+    "description": "answer pong!"
   },
   "TEST": {
     "name": "test",
