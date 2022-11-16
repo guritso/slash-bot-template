@@ -11,8 +11,8 @@ module.exports.run = async(client, inter, guild) => {
   const name = inter.options.getString("name").toUpperCase()
   // get the command form the json file
   if(!json[name]){
-    return await inter.reply({
-      content: "Command not found ×",
+    return inter.reply({
+      content: "command not found",
       ephemeral: true
     })
   }
@@ -23,14 +23,15 @@ module.exports.run = async(client, inter, guild) => {
      Routes.applicationGuildCommands(client.user.id, guild.id),
     { body: json[name] })
   }
+  
   if(type == 'global_command'){
     // register the command globally 
     await rest.post(
       Routes.applicationCommands(client.user.id),
       {body: json[name]})
   }
-  await inter.reply({
-    content: `Command ${name} added ✓`,
+  inter.reply({
+    content: `command ${name} added`,
     ephemeral: true
   })
 }
