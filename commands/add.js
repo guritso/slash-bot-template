@@ -6,9 +6,9 @@ module.exports.run = async(client, inter, guild) => {
   
   const rest = new REST({ version: '10'}).setToken(token)
   // get the type of command guild/global
-  const type = inter.options._hoistedOptions[0].name;
+  const type = inter.options.getString("type")
   // get the input (name of the command)
-  const value = inter.options.getString(type).toUpperCase()
+  const value = inter.options.getString("name").toUpperCase()
   // get the command form the json file
   if(!json[value]){
     return await inter.reply({
