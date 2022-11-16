@@ -4,21 +4,21 @@
     "description": "add a command",
   "options": [{
       "name": "name",
-      "description": "put the name of the command",
+      "description": "put the name of the command to add",
       "type": 3,
       "required": true
       },
     {
       "name": "type",
-      "description": "choose the type of the command",
+      "description": "choose the type of the command to add",
       "type": 3,
       "required": true,
       "choices": [{
-          "name": "Guild",
+          "name": "guild",
           "value": "guild_command"
         },
         {
-          "name": "Global",
+          "name": "global",
           "value": "global_command"
         }]
       }]
@@ -27,17 +27,25 @@
     "name": "delete",
     "description": "Delete a command.",
     "options": [{
-        "name": "guild",
-        "description": "Delete a command in this guild.",
-        "type": 3,
-        "required": false
-      },
-      {
-        "name": "global",
-        "description": "Delete a command on all guilds.",
-        "type": 3,
-        "required": false
-      }]
+      "name": "name",
+      "description": "put the name of the command to delete",
+      "type": 3,
+      "required": true
+        },
+    {
+      "name": "type",
+      "description": "choose the type of the command to delete",
+      "type": 3,
+      "required": true,
+      "choices": [{
+          "name": "guild",
+          "value": "guild_command"
+          },
+        {
+          "name": "global",
+          "value": "global_command"
+          }]
+        }]
   },
   "AVATAR": {
     "name": "avatar",
