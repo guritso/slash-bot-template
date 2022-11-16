@@ -1,18 +1,18 @@
 const { EmbedBuilder } = require('discord.js')
-module.exports.run = async(client, inter, guild) => {
-  
+module.exports.run = async (client, inter, guild) => {
+
   const member = guild.members.cache.get(inter.options.getUser('user') ? inter.options.get('user').value : inter.user.id)
-  
-  const image = member.user.avatarURL({dinamic:true,format:'png',size:4096})
-  
+
+  const image = member.user.avatarURL({ dinamic: true, format: 'png', size: 4096 })
+
   let embed = new EmbedBuilder()
-  .setTitle(member.user.tag)
-  .setImage(image)
-  .setFooter({
-    text: `Requested by ${inter.user.tag}`,
-    iconURL: inter.user.avatarURL({format:'png'})
-  })
-  .setColor('#00FFAA')
- 
-  await inter.reply({ embeds:[ embed ]})
+    .setTitle(member.user.tag)
+    .setImage(image)
+    .setFooter({
+      text: `Requested by ${inter.user.tag}`,
+      iconURL: inter.user.avatarURL({ format: 'png' })
+    })
+    .setColor('#282C34')
+
+  await inter.reply({ embeds: [embed] })
 }
