@@ -1,4 +1,4 @@
-# Slash bot template
+# Slash Bot Template
 A bot with a easy way to add slass commands!
 
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/GuriZenit/slash-bot-template/discord.js/OLD-V12.5.2?style=for-the-badge)
