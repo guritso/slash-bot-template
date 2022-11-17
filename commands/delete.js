@@ -18,7 +18,7 @@ module.exports.run = async (client, inter, guild) => {
   const id = getCommandId(arr, name);
   // return if invalid name
   if (!id)
-    content: `command ${name} not found`,
+      content: `command ${name} not found`,
     ephemeral: true
   })
   // call delete command
