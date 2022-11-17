@@ -24,7 +24,7 @@ module.exports.run = async (client, inter, guild) => {
   // call delete command
   deleteCommand(type).then(
   inter.reply({
-    content: `command ${name.toUpperCase()} deleted`,
+      content: `command ${name.toUpperCase()} deleted`,
     ephemeral: true
   }));
   // delete command function
