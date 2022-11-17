@@ -21,25 +21,25 @@ module.exports.run = async (client, inter, guild) => {
     return inter.reply({
       content: `command ${name} not found`,
       ephemeral: true,
-    })
+    });
   };
   // call delete command
   if (deleteCommand(type)) {
     return inter.reply({
       content: `command ${name.toUpperCase()} deleted`,
       ephemeral: true,
-    })
+    });
   };
   // delete command function
   function deleteCommand(type) {
     if (type === "global") {
       return rest.delete(
         Routes.applicationCommand(client.user.id, id)
-        );
+      );
     } else {
       return rest.delete(
         Routes.applicationGuildCommand(client.user.id, guild.id, id)
-        );
+      );
     }
   };
   /*/ simple function to get the id of a command, using the name and the array (parsed to JSON) /*/
