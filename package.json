@@ -1,21 +1,21 @@
 {
-  "name": "Slash-Commands-Discord-Bot",
-  "version": "1.0.0",
-  "description": "A discord bot that add your own slash commands ",
+  "name": "slash-bot-template",
+  "version": "1.5.0",
+  "description": "A discord bot with slash commands",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuriZenit/Slash-Commands-Discord-Bot.git"
+    "url": "git+https://github.com/gurizenit/slash-bot-template.git"
   },
   "author": "GuriZenit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GuriZenit/Slash-Commands-Discord-Bot/issues"
+    "url": "https://github.com/gurizenit/slash-bot-template/issues"
   },
-  "homepage": "https://github.com/GuriZenit/Slash-Commands-Discord-Bot#readme",
+  "homepage": "https://github.com/gurizenit/slash-bot-template#readme",
   "dependencies": {
     "@discordjs/rest": "^0.4.1",
     "discord-api-types": "^0.31.2",
