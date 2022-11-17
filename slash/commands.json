@@ -39,11 +39,11 @@
         "required": true,
         "choices": [{
             "name": "guild",
-            "value": "guild_command"
+            "value": "guild"
           },
           {
             "name": "global",
-            "value": "global_command"
+            "value": "global"
           }]
         }]
   },
