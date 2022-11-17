@@ -28,7 +28,7 @@ module.exports.run = async (client, inter, guild) => {
     ephemeral: true
   }));
   // delete command function
-  function deleteCommand(type){
+  function deleteCommand(type) {
     if(type === "global"){
       return rest.delete(Routes.applicationCommand(client.user.id, id));
     }else {
