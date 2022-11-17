@@ -32,7 +32,7 @@ module.exports.run = async (client, inter, guild) => {
     if(type === "global"){
       return rest.delete(Routes.applicationCommand(client.user.id, id));
     }else {
-      return rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, id));
+      return rest.delete(
     }
   }
   /*/ simple function to get the id of a command, using the name and the array (parsed to JSON) /*/
