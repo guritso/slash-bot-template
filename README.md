@@ -1,9 +1,10 @@
 # Slash bot template
 A bot with a easy way to add slass commands!
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/GuriZenit/slash)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/GuriZenit/Slash)
-![GitHub](https://img.shields.io/github/license/GuriZenit/slash?color=blue)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/GuriZenit/slash-bot-template/discord.js/OLD-V12.5.2?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/GuriZenit/slash-bot-template?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/GuriZenit/slash-bot-template?color=blue&style=for-the-badge)
+
 > Add slash commands from json file!
 
 > This is only for version 12.x of discord.js
