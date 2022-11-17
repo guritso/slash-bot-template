@@ -22,7 +22,7 @@ Having this we just need to use the guild `/add` command, and you can choose if 
 
 To remove the PING command we just need to use `/delete` like `/add` command:
 
-![](https://i.imgur.com/Gzs1H85.png)
+![](https://i.imgur.com/smSdlE8.png)
 > This doesn't change anything in json file!
 
 ## Usage
