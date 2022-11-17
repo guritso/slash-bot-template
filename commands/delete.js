@@ -7,6 +7,11 @@ module.exports.run = async (client, inter, guild) => {
   const type = inter.options.getString("type");
   // get the input (command name)
   const name = inter.options.getString("name").toLowerCase();
+  // get all guild/global commands
+  const commands = {
+    guild: await guild.commands.fetch(),
+    global: await client.application.commands.fetch()
+  }
   // parse to json
   const arr = commands[type].toJSON();
   // call the function
@@ -15,22 +20,20 @@ module.exports.run = async (client, inter, guild) => {
   if (!id) return inter.reply({
     content: `command ${name} not found`,
     ephemeral: true
-  });
+  })
   // call delete command
-  deleteCommand[type].then(
+  deleteCommand(type).then(
   inter.reply({
     content: `command ${name.toUpperCase()} deleted`,
     ephemeral: true
   }));
-  // get all guild/global commands
-  const commands = {
-    guild: await guild.commands.fetch(),
-    global: await client.application.commands.fetch()
-  }
-  // delete command object
-  const deleteCommand = {
-    guild: rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, id)),
-    global: rest.delete(Routes.applicationCommand(client.user.id, id))
+  // delete command function
+  function deleteCommand(type){
+    if(type === "global"){
+      rest.delete(Routes.applicationCommand(client.user.id, id));
+    }else {
+      rest.delete(Routes.applicationGuildCommand(client.user.id, guild.id, id));
+    }
   }
   /*/ simple function to get the id of a command, using the name and the array (parsed to JSON) /*/
   function getCommandId(arr, name) {
