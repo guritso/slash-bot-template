@@ -25,7 +25,7 @@
   },
   "DELETE": {
     "name": "delete",
-    "description": "Delete a command.",
+    "description": "delete a command",
     "options": [{
         "name": "name",
         "description": "put the name of the command to delete",
