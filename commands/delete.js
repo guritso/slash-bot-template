@@ -17,7 +17,7 @@ module.exports.run = async (client, inter, guild) => {
   // call the function
   const id = getCommandId(arr, name);
   // return if invalid name
-  if (!id) return inter.reply({
+  if (!id)
     content: `command ${name} not found`,
     ephemeral: true
   })
