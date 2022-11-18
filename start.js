@@ -12,9 +12,10 @@ const rest = new REST({ version: "10" }).setToken(token);
 
 (async () => {
   console.log("adding first command...");
+  console.log("success!");
+  
   await rest
     .post(Routes.applicationGuildCommands(clientID, guildID), {
       body: json["ADD"],
-};
-  console.log("success!");
-})();
+    });
+})()
