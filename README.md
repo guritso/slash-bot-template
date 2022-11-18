@@ -1,4 +1,7 @@
 # Slash Bot Template
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f5c41328e2ae457190c72bff41481147)](https://app.codacy.com/gh/GuriZenit/slash-bot-template?utm_source=github.com&utm_medium=referral&utm_content=GuriZenit/slash-bot-template&utm_campaign=Badge_Grade_Settings)
+
 A bot with a easy way to add slash commands!
 
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/GuriZenit/Slash-Bot-Template/discord.js/main?style=for-the-badge)
