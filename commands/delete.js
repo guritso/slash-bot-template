@@ -39,7 +39,7 @@ module.exports.run = async (client, inter, guild) => {
         Routes.applicationGuildCommand(client.user.id, guild.id, id)
       );
     }
-  };
+  }
   /*/ simple function to get the id of a command, using the name and the array (parsed to JSON) /*/
   function getCommandId(arr, name) {
     for (let i in arr) {
@@ -48,5 +48,5 @@ module.exports.run = async (client, inter, guild) => {
       }
     }
     return null;
-  };
+  }
 };
