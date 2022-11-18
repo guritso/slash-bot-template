@@ -1,7 +1,8 @@
 const json = require("../slash/commands.json");
-const { REST, Routes } = require("discord.js");
-const { token } = require("../config.js");
-const rest = new REST({ version: "10" }).setToken(token);
+const { Routes, REST } = require("discord.js");
+const token = require("../config.js");
+const rest = new REST({ version: "10" }).setToken(config.token);
+
 module.exports.run = async (client, inter, guild) => {
   // get the name-type guild/global
   const type = inter.options.getString("type");
