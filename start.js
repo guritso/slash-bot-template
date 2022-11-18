@@ -16,6 +16,6 @@ const rest = new REST({ version: "10" }).setToken(token);
   
   await rest
     .post(Routes.applicationGuildCommands(clientID, guildID), {
-      body: json["ADD"],
+    body: json["ADD"],
     });
 })();
