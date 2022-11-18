@@ -1,6 +1,6 @@
 const json = require("../slash/commands.json");
 const { Routes, REST } = require("discord.js");
-const token = require("../config.js");
+const config = require("../config.js");
 const rest = new REST({ version: "10" }).setToken(config.token);
 
 module.exports.run = async (client, inter, guild) => {
