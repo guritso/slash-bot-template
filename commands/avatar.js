@@ -1,20 +1,18 @@
 const { EmbedBuilder } = require("discord.js");
 
 module.exports.run = async (client, inter, guild) => {
-  const member = guild.members.cache.get(
-    inter.options.getUser("user")
-      ? inter.options.get("user").value
-      : inter.user.id
-  );
-  //
-  const image = member.user.avatarURL({
+  const user = inter.options.data.length
+    ? inter.options.getUser('user')
+    : inter.user;
+
+  const image = user.avatarURL({
     dinamic: true,
     format: "png",
     size: 4096,
   });
-  //
+  
   const embed = new EmbedBuilder()
-    .setTitle(member.user.tag)
+    .setTitle(user.tag)
     .setImage(image)
     .setFooter({
       text: `Requested by ${inter.user.tag}`,
@@ -22,6 +20,7 @@ module.exports.run = async (client, inter, guild) => {
         format: "png",
       }),
     })
-    .setColor("#282C34");
+    .setColor("#00FFAA");
+    
   await inter.reply({ embeds: [embed] });
 };
