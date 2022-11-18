@@ -19,7 +19,7 @@ client.on("interactionCreate", async (inter) => {
   const command = inter.commandName.toLowerCase();
   // run the command file from command name
   try {
-    require(`./commands/${command}.js`).run(inter, client,  guild);
+    require(`./commands/${command}.js`).run(inter, client, guild);
   } catch (err) {
     console.log(err);
   }

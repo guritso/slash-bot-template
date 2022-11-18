@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require("discord.js");
 
-module.exports.run = async (inter, client,  guild) => {
+module.exports.run = async (inter, client, guild) => {
   const user = inter.options.data.length
     ? inter.options.getUser("user")
     : inter.user;
