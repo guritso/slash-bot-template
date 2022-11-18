@@ -2,7 +2,7 @@ const { REST, Routes } = require("discord.js");
 const { token } = require("../config.js");
 const rest = new REST({ version: "10" }).setToken(token);
 
-module.exports.run = async (client, inter, guild) => {
+module.exports.run = async (inter, client, guild) => {
   // get the type of the command guild/global
   const type = inter.options.getString("type");
   // get the input (command name)
