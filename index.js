@@ -23,5 +23,5 @@ client.on("interactionCreate", async (inter) => {
   } catch (err) {
     console.log(err);
   }
-})
+});
 client.login(token);
