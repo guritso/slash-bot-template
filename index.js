@@ -13,7 +13,6 @@ client.on("ready", () => {
 // interaction to response a command
 client.on("interactionCreate", async (inter) => {
   if (!inter.isChatInputCommand()) return;
-
   // get guild / command / options
   const guild = client.guilds.cache.get(inter.guildId);
   const command = inter.commandName.toLowerCase();

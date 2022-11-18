@@ -15,6 +15,7 @@ module.exports.run = async (inter, client, guild) => {
       ephemeral: true,
     });
   }
+  
   if (type == "global") {
     // register the command globally
     await rest.post(Routes.applicationCommands(client.user.id), {
@@ -26,6 +27,7 @@ module.exports.run = async (inter, client, guild) => {
       body: json[name],
     });
   }
+  
   inter.reply({
     content: `command ${name} added`,
     ephemeral: true,
