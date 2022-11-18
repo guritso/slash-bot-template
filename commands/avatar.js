@@ -2,7 +2,7 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports.run = async (client, inter, guild) => {
   const user = inter.options.data.length
-    ? inter.options.getUser('user')
+    ? inter.options.getUser("user")
     : inter.user;
 
   const image = user.avatarURL({
@@ -10,7 +10,7 @@ module.exports.run = async (client, inter, guild) => {
     format: "png",
     size: 4096,
   });
-  
+
   const embed = new EmbedBuilder()
     .setTitle(user.tag)
     .setImage(image)
@@ -21,6 +21,6 @@ module.exports.run = async (client, inter, guild) => {
       }),
     })
     .setColor("#00FFAA");
-    
+
   await inter.reply({ embeds: [embed] });
 };
