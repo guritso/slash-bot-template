@@ -5,7 +5,7 @@ const rest = new REST({ version: "10" }).setToken(config.token);
 
 module.exports.run = async (client, inter, guild) => {
   // get the input (command name)
-  const name = inter.options.getString("name").toLowerCase();
+  const name = inter.options.getString("name").toUpperCase();
   // get the type of the command guild/global
   const type = inter.options.getString("type");
   // get the command form the json file
