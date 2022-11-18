@@ -28,7 +28,7 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 ## Usage
 
 First you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, then run 
-```
+```bash
 node start.js
 ```
 or you can use it on a ready event in the `/index.js`:
