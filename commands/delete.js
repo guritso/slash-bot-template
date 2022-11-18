@@ -19,7 +19,7 @@ module.exports.run = async (inter, client, guild) => {
   // return if invalid name
   if (!id) {
     return inter.reply({
-      content: `command ${name} not found`,
+      content: `command ${name.toUpperCase()} not found`,
       ephemeral: true,
     });
   }
