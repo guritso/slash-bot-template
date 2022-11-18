@@ -4,10 +4,11 @@ const config = require("../config.js");
 const rest = new REST({ version: "10" }).setToken(config.token);
 
 module.exports.run = async (client, inter, guild) => {
-  // get the name-type guild/global
+   // get the input (command name)
+  const name = inter.options.getString("name").toLowerCase();
+ // get the type of the command guild/global
   const type = inter.options.getString("type");
-  const name = inter.options.getString("name").toUpperCase();
-  // get the command form the json file
+   // get the command form the json file
   if (!json[name]) {
     return inter.reply({
       content: `command ${name} not found`,
