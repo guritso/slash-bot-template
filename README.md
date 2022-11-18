@@ -28,7 +28,7 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 ## Usage
 
 First you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, then run 
-```
+```bash
 node start.js
 ```
 or you can use it on a ready event in the `/index.js`:
@@ -39,7 +39,7 @@ require('./start.js')
 
 Now you have the first command `add`,
 lets start using the bot, You can use the command:
-```
+```bash
 /add name:delete type:guild
 ```
 it will add the `/delete` command like we saw on Example.
@@ -60,11 +60,11 @@ Everything command you want to add just edit the `/slash/commands.json` using th
 }
 ```
 So you go to discord and use
-```
+```bash
 /add name:command1 type:guild
 ```
 or
-```
+```bash
 /add name:command2 type:global
 ```
 
