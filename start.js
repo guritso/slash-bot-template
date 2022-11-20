@@ -13,7 +13,6 @@ const _name = "ADD";
 
 (async () => {
   console.log("adding first command...");
-  console.log("success!");
   try {
     await rest.post(Routes.applicationGuildCommands(clientID, guildID), {
       body: json[_name],
