@@ -20,7 +20,7 @@ client.on("interactionCreate", async (inter) => {
   try {
     require(`./commands/${command}.js`).run(inter, client, guild);
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 });
 client.login(token);
