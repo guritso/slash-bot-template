@@ -33,7 +33,11 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 ## Usage
 
-First you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, and your token put in a `.env` file or in the `/config.js`.
+First of all, lets install the dependencies, use:
+```
+npm install
+```
+Now you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, and your token put in a `.env` file or in the `/config.js`.
 then run:
 
 ```bash
