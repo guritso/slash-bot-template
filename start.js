@@ -9,11 +9,17 @@ const json = require("./slash/commands.json");
 const guildID = "GUILD_ID_HERE";
 const clientID = "BOT_ID_HERE";
 const rest = new REST({ version: "10" }).setToken(token);
-
+const _name = "ADD";
+// this will add the first command 'ADD'
 (async () => {
   console.log("adding first command...");
-  console.log("success!");
-  await rest.post(Routes.applicationGuildCommands(clientID, guildID), {
-    body: json["ADD"],
-  });
+  try {
+    await rest.post(Routes.applicationGuildCommands(clientID, guildID), {
+      body: json[_name],
+    });
+  } catch (err) {
+    return console.log(err);
+  }
+  console.log(`command ${_name} added`);
+  console.log(`now run 'node index.js'`);
 })();
