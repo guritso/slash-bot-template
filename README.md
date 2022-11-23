@@ -71,7 +71,7 @@ Everything command you want to add just edit the `/slash/commands.json` using th
 "COMMAND1": {
   "name": "command1",
   "description": "description of 1"
-}
+},
 "COMMAND2": {
   "name": "command2",
   "description": "description of 2",
