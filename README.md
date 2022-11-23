@@ -29,12 +29,16 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 ![](https://i.imgur.com/R5MqXzQ.png)
 
-> This doesn't change anything in json file!
+> This doesn't change anything in json file
 
-## Usage
+# Usage
 
-First of all, lets install the dependencies, use:
-```
+#### Requirements
+- nodejs `V16.6.x`
+- discord.js `V14.6.x`
+
+First of all let's install the dependencies, use:
+```bash
 npm install
 ```
 Now you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, and your token put in a `.env` file or in the `/config.js`.
