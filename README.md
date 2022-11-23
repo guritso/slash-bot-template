@@ -31,11 +31,12 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 > This doesn't change anything in json file
 
-## Usage
+## Requirements
 
-### Requirements
--  nodejs `V16.6.x`
--  discord.js `V14.6.x`
+  - nodejs `V16.6.x`
+  - discord.js `V14.6.x`
+
+## Usage
 
 First of all let's install the dependencies, use:
 ```bash
@@ -67,10 +68,10 @@ it will add the `/delete` command like we saw on Example.
 
 #### Default commands
 
--  add
--  delete
--  avatar
--  ping
+  - add
+  - delete
+  - avatar
+  - ping
 
 > these commands are already setup in `/slash/commands` and `/commands` you can `add` them.
 
