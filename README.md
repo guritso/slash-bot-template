@@ -65,6 +65,15 @@ lets start using the bot, You can use the command:
 
 it will add the `/delete` command like we saw on Example.
 
+#### Default commands
+
+- add
+- delete
+- avatar
+- ping
+
+> these commands are already setup in `/slash/commands` and `/commands` you can `add` them.
+
 Everything command you want to add just edit the `/slash/commands.json` using the following style:
 
 ```json

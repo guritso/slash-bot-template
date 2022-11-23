@@ -60,25 +60,5 @@
   "PING": {
     "name": "ping",
     "description": "answer pong"
-  },
-  "TEST": {
-    "name": "test",
-    "description": "testin something",
-    "options": [{
-      "name": "opi",
-      "description": "desc op",
-      "type": 3,
-      "required": true,
-      "choices": [{
-          "name": "choice 1",
-          "description": "you choos one",
-          "value": "choise_one"
-      },
-        {
-          "name": "choice 2",
-          "type": 3,
-          "value": "choice_two"
-      }]
-    }]
   }
 }
