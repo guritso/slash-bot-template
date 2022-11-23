@@ -10,7 +10,7 @@ const guildID = "GUILD_ID_HERE";
 const clientID = "BOT_ID_HERE";
 const rest = new REST({ version: "10" }).setToken(token);
 const _name = "ADD";
-
+// this will add the first command 'ADD'
 (async () => {
   console.log("adding first command...");
   try {
