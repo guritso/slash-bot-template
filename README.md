@@ -73,7 +73,7 @@ it will add the `/delete` command like we saw on Example.
 -   avatar
 -   ping
 
-> these commands are already setup in `/slash/commands` and `/commands` you can `add` them.
+> these commands are already setup in `/slash/commands.json` and `/commands` you can `add` them.
 
 Everything command you want to add just edit the `/slash/commands.json` using the following style:
 
