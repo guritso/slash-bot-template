@@ -31,7 +31,7 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 > This doesn't change anything in json file
 
-# Usage
+## Usage
 
 #### Requirements
 - nodejs `V16.6.x`
