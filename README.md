@@ -33,8 +33,8 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 ## Requirements
 
-  - nodejs `V16.6.x`
-  - discord.js `V14.6.x`
+-   nodejs `V16.6.x`
+-   discord.js `V14.6.x`
 
 ## Usage
 
@@ -66,12 +66,12 @@ lets start using the bot, You can use the command:
 
 it will add the `/delete` command like we saw on Example.
 
-#### Default commands
+### Default commands
 
-  - add
-  - delete
-  - avatar
-  - ping
+-   add
+-   delete
+-   avatar
+-   ping
 
 > these commands are already setup in `/slash/commands` and `/commands` you can `add` them.
 
