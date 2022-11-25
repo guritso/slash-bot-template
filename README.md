@@ -21,7 +21,7 @@ Let's suppose we have this PING command in `/slash/commands.json`:
 }
 ```
 
-Having this we just need to use the guild `/add` command, and you can choose if it will be a guild or global command:
+Having this we just need to use the guild `/add` command, you can choose if it will be a guild or global command:
 
 ![](https://i.imgur.com/RHOjui9.png)
 
@@ -41,6 +41,8 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 First of all let's install the dependencies, use:
 ```bash
 npm install
+# or
+yarn
 ```
 Now you need to add your `BOT_ID` and your `GUILD_ID` on the file `/start.js`, and your token put in a `.env` file or in the `/config.js`.
 then run:
@@ -57,15 +59,15 @@ require("./start.js");
 
 > you just need to use once
 
-Now you have the first command `add`,
+You will get the first command `add`,
 lets start using the bot, You can use the command:
 
 ```bash
 /add name:delete type:guild
 ```
 
-it will add the `/delete` command like we saw on Example.
-
+It will add the `/delete` command like we saw on Example.
+you
 ### Default commands
 
 -   add
@@ -75,7 +77,7 @@ it will add the `/delete` command like we saw on Example.
 
 > these commands are already setup in `/slash/commands.json` and `/commands` you can `add` them.
 
-Everything command you want to add just edit the `/slash/commands.json` using the following style:
+Everything command you want to add, just edit the `/slash/commands.json` using the following style:
 
 ```json
 "COMMAND1": {
@@ -104,7 +106,11 @@ or
 /add name:command2 type:global
 ```
 
-and obviously you need to make the command JavaScript file on `/commands/command1.js`!
+> Don't miss the JavaScript file on `/commands/command1.js`!
+
+## Links
+
+[Slash Commands](https://discord.com/developers/docs/interactions/application-commands)
 
 ## License
 
