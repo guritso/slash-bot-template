@@ -67,7 +67,7 @@ lets start using the bot, You can use the command:
 ```
 
 It will add the `/delete` command like we saw on Example.
-you
+
 ### Default commands
 
 -   add
@@ -94,7 +94,7 @@ Everything command you want to add, just edit the `/slash/commands.json` using t
 }
 ```
 
-So you go to discord and use
+then go to discord and use
 
 ```bash
 /add name:command1 type:guild
