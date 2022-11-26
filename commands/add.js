@@ -5,11 +5,12 @@ const rest = new REST({ version: "10" }).setToken(config.token);
 
 module.exports.run = async (inter, client, guild) => {
   // only the user/team owners of the bot can use 'add'
-  const team = await client.application.fetch();
-  const isTeam = team.owner.member.get(inter.user.id);
-  const isOwner = team.owner.id == inter.user.id;
+  const bot = await client.application.fetch();
+  const team = bot.owner.members;
+  const isOwner = bot.owner.id == inter.user.id;
+  const isMember = team ? team.get(inter.user.id) : false;
   // even if this command is added as global
-  if (!isTeam && !isOwner) {
+  if (!isMember && !isOwner) {
     return inter.reply({
       content: "` add `: you don't have ` owner ` permission",
       ephemeral: true,
