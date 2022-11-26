@@ -1,6 +1,6 @@
 {
   "name": "slash-bot-template",
-  "version": "2.10.1",
+  "version": "2.15.0",
   "description": "A template discord bot with slash commands",
   "main": "index.js",
   "dependencies": {
