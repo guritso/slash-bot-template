@@ -25,7 +25,6 @@ module.exports.run = async (inter, client, guild) => {
       body: json[name],
     });
   }
-  
   inter.reply({
     content: `command ${name} added`,
     ephemeral: true,
