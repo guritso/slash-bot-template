@@ -11,7 +11,8 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "watch": "nodemon index.js",
     "test": "node start.js"
   },
   "repository": {
