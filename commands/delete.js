@@ -5,9 +5,10 @@ const rest = new REST({ version: "10" }).setToken(token);
 module.exports.run = async (inter, client, guild) => {
   // only the user/team owners of the bot can use 'delete'
   const team = await client.application.fetch();
+  const isOwner = team.owner.id == inter.user.id;
+  const isTeam = team.owner.members.get(inter.user.id);
   // even if this command is added as global
-  if (!team.owner.members.get(inter.user.id) &&
-    team.owner.id != inter.user.id) {
+  if (!isOwner && !isTeam) {
     return inter.reply({
       content: "` delete `: you don't have ` owner ` permission",
       ephemeral: true,
