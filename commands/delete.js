@@ -3,6 +3,16 @@ const { token } = require("../config.js");
 const rest = new REST({ version: "10" }).setToken(token);
 
 module.exports.run = async (inter, client, guild) => {
+  // only the user/team owners of the bot can use 'add'
+  const team  = await client.application.fetch();
+  // even if this command is added as global
+  if (!team.owner.members.get(inter.user.id)
+    && team.owner.id != inter.user.id ) {
+    return inter.reply({
+      content: "`delete`: you don't have `owner` permission",
+  	  ephemeral: true,
+    });
+  }
   // get the type of the command guild/global
   const type = inter.options.getString("type");
   // get the input (command name)
