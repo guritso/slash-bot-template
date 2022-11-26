@@ -17,7 +17,7 @@ client.on("interactionCreate", async (inter) => {
   const guild = client.guilds.cache.get(inter.guildId);
   const command = inter.commandName.toLowerCase();
   // check if is one of the owners commands
-  if (command === "add" || command === "delete"){
+  if (command === "add" || command === "delete") {
     // only the user/team owners of the bot can use these commands
     const bot = await client.application.fetch();
     const team = bot.owner.members;
