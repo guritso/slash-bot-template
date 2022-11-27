@@ -33,7 +33,7 @@ To remove the PING command we just need to use `/delete` like `/add` command:
 
 ## Requirements
 
--   nodejs `V16.6.x`
+-   nodejs `V16.9.x`
 -   discord.js `V14.6.x`
 
 ## Usage
