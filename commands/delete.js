@@ -22,7 +22,7 @@ module.exports.run = async (inter, client, guild) => {
       embeds: [
         {
           title: `${name} ⊗ NOT FOUND in ${type}`,
-          color: [216, 48, 59], // = #D8303B
+          color: 0xd8303b, // = #D8303B
         },
       ],
       ephemeral: true,
@@ -34,7 +34,7 @@ module.exports.run = async (inter, client, guild) => {
       embeds: [
         {
           title: `${name} ⊗ DELETED in ${type}`,
-          color: [0, 255, 170], // = #00FFAA
+          color: 0x00ffaa, // = #00FFAA
         },
       ],
       ephemeral: true,
