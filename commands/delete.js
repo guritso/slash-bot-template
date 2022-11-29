@@ -19,20 +19,24 @@ module.exports.run = async (inter, client, guild) => {
   // return if invalid name
   if (!id) {
     return inter.reply({
-      embeds: [{
-        title: `${name} ⊗ NOT FOUND in ${type}`,
-        color: 14168123,// = #D8303B
-      }],
+      embeds: [
+        {
+          title: `${name} ⊗ NOT FOUND in ${type}`,
+          color: 14168123, // = #D8303B
+        },
+      ],
       ephemeral: true,
     });
   }
   // call delete command
   if (deleteCommand(type)) {
     return inter.reply({
-      embeds: [{ 
-        title: `${name} ⊗ DELETED in ${type}`,
-        color: 65450,// = #00FFAA
-      }],
+      embeds: [
+        {
+          title: `${name} ⊗ DELETED in ${type}`,
+          color: 65450, // = #00FFAA
+        },
+      ],
       ephemeral: true,
     });
   }

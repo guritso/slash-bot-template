@@ -11,10 +11,12 @@ module.exports.run = async (inter, client, guild) => {
   // check the command in the json file
   if (!json[name]) {
     return inter.reply({
-      embeds: [{
-        title: `${name} ⊗ NOT FOUND in JSON`,
-        color: 14168123,// = #D8303B
-      }],
+      embeds: [
+        {
+          title: `${name} ⊗ NOT FOUND in JSON`,
+          color: 14168123, // = #D8303B
+        },
+      ],
       ephemeral: true,
     });
   }
@@ -29,10 +31,12 @@ module.exports.run = async (inter, client, guild) => {
     });
   }
   inter.reply({
-    embeds: [{
-      title: `${name} ⊕ ADDED to ${type}`,
-      color: 65450,// = #00FFAA
-    }],
+    embeds: [
+      {
+        title: `${name} ⊕ ADDED to ${type}`,
+        color: 65450, // = #00FFAA
+      },
+    ],
     ephemeral: true,
   });
 };
