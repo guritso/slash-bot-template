@@ -4,13 +4,13 @@ const rest = new REST({ version: "10" }).setToken(token);
 
 module.exports.run = async (inter, client, guild) => {
   // get the type of the command guild/global
-  const type = inter.options.getString("type");
+  const type = inter.options.getString("type").toUpperCase();
   // get the input (command name)
-  const name = inter.options.getString("name").toLowerCase();
+  const name = inter.options.getString("name").toUpperCase();
   // get all guild/global commands
   const commands = {
-    guild: await guild.commands.fetch(),
-    global: await client.application.commands.fetch(),
+    GUILD: await guild.commands.fetch(),
+    GLOBAL: await client.application.commands.fetch(),
   };
   // parse to json
   const arr = commands[type].toJSON();
@@ -19,20 +19,30 @@ module.exports.run = async (inter, client, guild) => {
   // return if invalid name
   if (!id) {
     return inter.reply({
-      content: `command ${name.toUpperCase()} not found`,
+      embeds: [
+        {
+          title: `${name} ⊗ NOT FOUND in ${type}`,
+          color: [216, 48, 59], // = #D8303B
+        },
+      ],
       ephemeral: true,
     });
   }
   // call delete command
   if (deleteCommand(type)) {
     return inter.reply({
-      content: `command ${name.toUpperCase()} deleted`,
+      embeds: [
+        {
+          title: `${name} ⊗ DELETED in ${type}`,
+          color: [0, 255, 170], // = #00FFAA
+        },
+      ],
       ephemeral: true,
     });
   }
   // delete command function
   function deleteCommand(type) {
-    if (type === "global") {
+    if (type === "GLOBAL") {
       return rest.delete(Routes.applicationCommand(client.user.id, id));
     } else {
       return rest.delete(
@@ -42,8 +52,9 @@ module.exports.run = async (inter, client, guild) => {
   }
   /*/ simple function to get the id of a command, using the name and the array (parsed to JSON) /*/
   function getCommandId(arr, name) {
+    let _name = name.toLowerCase();
     for (let i in arr) {
-      if (arr[i].name === name) {
+      if (arr[i].name === _name) {
         return arr[i].id;
       }
     }
