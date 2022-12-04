@@ -6,13 +6,13 @@
 const { REST, Routes } = require("discord.js");
 const { token } = require("./config.js");
 const json = require("./slash/commands.json");
-const guildID = "GUILD_ID_HERE";
-const clientID = "BOT_ID_HERE";
+const guildID = "794717836827688981";
+const clientID = "797576906806919199";
 const rest = new REST({ version: "10" }).setToken(token);
 const _name = "ADD";
 // this will add the first command 'ADD'
 (async () => {
-  console.log("adding first command...");
+  process.stdin.write("adding first command...");
   try {
     await rest.post(Routes.applicationGuildCommands(clientID, guildID), {
       body: json[_name],
@@ -20,6 +20,7 @@ const _name = "ADD";
   } catch (err) {
     return console.log(err);
   }
+  console.log(" done ✓")
   console.log(`command ${_name} added`);
   console.log(`now run 'node index.js'`);
 })();
