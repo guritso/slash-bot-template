@@ -75,9 +75,9 @@ It will add the `/delete` command like we saw on Example.
 -   avatar
 -   ping
 
-> these commands are already setup in `/slash/commands.json` and `/commands` you can `add` them.
+> these commands are already setup in `/slash/commands.json` and `/commands`, you can `add` them.
 
-Everything command you want to add, just edit the `/slash/commands.json` using the following style:
+Any command you want to add, just edit the `/slash/commands.json` using the following format
 
 ```json
 "COMMAND1": {
@@ -106,7 +106,7 @@ or
 /add name:command2 type:global
 ```
 
-> Don't miss the JavaScript file on `/commands/command1.js`!
+> Don't miss the JavaScript file:`/commands/command1.js`!
 
 ## Links
 
