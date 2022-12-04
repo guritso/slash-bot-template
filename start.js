@@ -20,7 +20,7 @@ const _name = "ADD";
   } catch (err) {
     return console.log(err);
   }
-  console.log(" done ✓")
+  console.log(" done ✓");
   console.log(`command ${_name} added`);
   console.log(`now run 'node index.js'`);
 })();
