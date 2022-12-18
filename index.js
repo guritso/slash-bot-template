@@ -3,13 +3,6 @@ const { token } = require("./config.js");
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
-
-client.on("ready", () => {
-  console.log(`${client.user.tag} online`);
-  client.user.setPresence({
-    activities: [{ name: `Use /`, type: 1 }],
-  });
-});
 // interaction to response a command
 client.on("interactionCreate", async (inter) => {
   if (!inter.isChatInputCommand()) return;
@@ -37,5 +30,11 @@ client.on("interactionCreate", async (inter) => {
   } catch (err) {
     console.log(err);
   }
+});
+client.on("ready", () => {
+  console.log(`${client.user.tag} online`);
+  client.user.setPresence({
+    activities: [{ name: `Use /`, type: 1 }],
+  });
 });
 client.login(token);
