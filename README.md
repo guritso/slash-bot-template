@@ -66,7 +66,7 @@ lets start using the bot, You can use the command:
 /add name:delete type:guild
 ```
 
-It will add the `/delete` command like we saw on Example.
+It will add the `/delete` command like we saw on [Example](#example).
 
 ### Default commands
 
