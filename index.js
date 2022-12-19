@@ -5,7 +5,7 @@ const client = new Client({
   presence: {
     activities: [{ name: "use /", type: 0 }],
     status: "dnd",
-  }
+  },
 });
 // interaction to response a command
 client.on("interactionCreate", async (inter) => {
