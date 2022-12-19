@@ -2,6 +2,10 @@ const { Client, GatewayIntentBits } = require("discord.js");
 const { token } = require("./config.js");
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
+  presence: {
+    activities: [{ name: "use /", type: 0 }],
+    status: "dnd",
+  }
 });
 // interaction to response a command
 client.on("interactionCreate", async (inter) => {
@@ -33,8 +37,5 @@ client.on("interactionCreate", async (inter) => {
 });
 client.on("ready", () => {
   console.log(`${client.user.tag} online`);
-  client.user.setPresence({
-    activities: [{ name: `Use /`, type: 1 }],
-  });
 });
 client.login(token);
