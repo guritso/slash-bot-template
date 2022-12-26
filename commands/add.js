@@ -5,7 +5,7 @@ const rest = new REST({ version: "10" }).setToken(config.token);
 
 module.exports.run = async (inter, client, guild) => {
   // read the commands.json
-  const PATH = "slash/commands.json";
+  const PATH = process.cwd() + "/slash/commands.json";
   const jsonFile = JSON.parse(fs.readFileSync(PATH));
   // get the input (command name)
   const name = inter.options.getString("name").toUpperCase();
