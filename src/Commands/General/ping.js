@@ -1,7 +1,13 @@
 const { EmbedBuilder } = require("discord.js");
 
-module.exports.run = async (inter, client) => {
-  const lat = Date.now() - inter.createdTimestamp;
+module.exports = {
+  data: {
+    name: "ping",
+    description: "answer pong",
+    dm_permissions: "0"
+  },
+  async execute(interaction, client) {
+  const lat = Date.now() - interaction.createdTimestamp;
   const api = Math.round(client.ws.ping);
 
   const embed = new EmbedBuilder()
@@ -12,8 +18,9 @@ module.exports.run = async (inter, client) => {
     ])
     .setColor("#00FFAA");
 
-  await inter.reply({
+  await interaction.reply({
     embeds: [embed],
     ephemeral: true,
   });
-};
+}
+}
