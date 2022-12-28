@@ -1,6 +1,6 @@
 require("dotenv").config();
 module.exports = {
-  GUILD_ID: "null", // replace with your guild id
-  BOT_ID: "null", // replace with your bot id
+  GUILD_ID: "YOUR_GUILD_ID",
+  BOT_ID: "YOUR_BOT_ID",
   TOKEN: process.env.TOKEN,
 };
