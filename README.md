@@ -51,7 +51,7 @@ node index.js
 
 You bot will start with the first command `add`.
 
-Lets start using the bot, You can use the command:
+Lets use the bot, You can run the command:
 
 ```bash
 /add name:delete type:guild
@@ -86,7 +86,7 @@ Then go to discord and use
 /add name:say type:guild
 ```
 
-Or if you want to add on all guids:
+Or if you want to add on all guilds:
 
 ```bash
 /add name:say type:global
