@@ -30,8 +30,8 @@ To remove the command we just need to use `/delete`:
 
 ## Requirements
 
-- nodejs `V16.9.x`
-- discord.js `V14.6.x`
+-   nodejs `V16.9.x`
+-   discord.js `V14.6.x`
 
 ## Usage
 
@@ -61,10 +61,10 @@ It will add the `/delete` command like we saw on [Example](#example).
 
 ### Default commands
 
-- add
-- delete
-- avatar
-- ping
+-   add
+-   delete
+-   avatar
+-   ping
 
 > these commands are already setup in `/src/Commands`, you can `add` them.
 
@@ -96,7 +96,7 @@ Or if you want to add on all guilds:
 
 If you want to add all commands on startup, remove the code from `src/Structures/handler.js` and add this one:
 
-```
+```javascript
 const { REST, Routes } = require("discord.js");
 
 module.exports = {
@@ -124,7 +124,7 @@ module.exports = {
 To add globally during start change this on `// to guild` comment.
 
 
-```
+```javascript
 // to global
 await rest.put(Routes.applicationCommands(BOT_ID), {
       body: commandArray,
