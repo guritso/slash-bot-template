@@ -10,7 +10,6 @@ A different way to add and delete slash commands!
 
 Let's use the data of `ping` command in `/src/Commands/ping.js`:
 
-
 ```javascript
 module.exports = {
   data: {
