@@ -34,7 +34,7 @@ module.exports = {
   async execute(interaction, client) {
     const { TOKEN } = client.config;
     const guild = interaction.guild;
-    const rest = new REST({ version: "10" })
+    const rest = new REST({ version: "10" });
     rest.setToken(TOKEN);
     // get the input (command name)
     const name = interaction.options.getString("name").toUpperCase();
@@ -42,7 +42,7 @@ module.exports = {
     const type = interaction.options.getString("type").toUpperCase();
     // get the command
     const command = client.commands.get(name.toLowerCase());
-    console.log(command)
+    console.log(command);
     if (!command) {
       return interaction.reply({
         embeds: [
