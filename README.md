@@ -129,7 +129,7 @@ To add globally during start change this on `// to guild` comment.
 // to global
 await rest.put(Routes.applicationCommands(BOT_ID), {
       body: commandArray,
-    });
+});
 ```
 
 > Caution! the `add` and `delete` commands will also be added globally!
