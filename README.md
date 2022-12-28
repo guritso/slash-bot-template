@@ -92,6 +92,47 @@ Or if you want to add on all guilds:
 /add name:say type:global
 ```
 
+## Tips
+
+If you want to add all commands on startup, remove the code from `src/Structures/handler.js` and add this one:
+
+```
+const { REST, Routes } = require("discord.js");
+
+module.exports = {
+  async execute(client) {
+    const { TOKEN, GUILD_ID, BOT_ID } = client.config;
+    const rest = new REST({ version: "10" }).setToken(TOKEN);
+
+    const commandArray = new Array();
+    const commands = client.commands;
+
+    commands.forEach((cmd) => {
+      commandArray.push(cmd.data);
+    });
+    // to guild
+    await rest.put(Routes.applicationGuildCommands(BOT_ID, GUILD_ID), {
+      body: commandArray,
+    });
+  },
+};
+
+```
+
+> You still can use `add` and `delete` commands, but if you delete, they will be readded when bot restart.
+
+To add globally during start change this on `// to guild` comment.
+
+
+```
+// to global
+await rest.put(Routes.applicationCommands(BOT_ID), {
+      body: commandArray,
+    });
+```
+
+> Caution! the `add` and `delete` commands will also be added globally!
+
 ## Links
 
 [Slash Commands](https://discord.com/developers/docs/interactions/application-commands)
