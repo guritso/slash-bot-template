@@ -1,6 +1,6 @@
 # Slash Bot Template
 
-A different way to add adn delete slash commands!
+A different way to add and delete slash commands!
 
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/GuriZenit/Slash-Bot-Template/discord.js/main?style=for-the-badge)
 [![Codacy branch grade](https://img.shields.io/codacy/grade/df82a32897b142fab1efeb68435eb69e/main?color=2a672d&style=for-the-badge)](https://www.codacy.com/gh/GuriZenit/slash-bot-template/dashboard?utm_source=github.com&utm_medium=referral&utm_content=GuriZenit/slash-bot-template&utm_campaign=Badge_Grade)
@@ -24,7 +24,7 @@ With this, we just need to use the `/add` guild command:
 
 ![](https://i.imgur.com/RHOjui9.png)
 
-To remove the PING command we just need to use `/delete`:
+To remove the command we just need to use `/delete`:
 
 ![](https://i.imgur.com/R5MqXzQ.png)
 
