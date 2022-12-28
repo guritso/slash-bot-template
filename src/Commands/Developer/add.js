@@ -1,6 +1,4 @@
 const { Routes, REST } = require("discord.js");
-const config = require("../../Configs/config.js");
-const rest = new REST({ version: "10" }).setToken(config.token);
 
 module.exports = {
   data: {
@@ -34,13 +32,16 @@ module.exports = {
     ],
   },
   async execute(interaction, client) {
+    const { TOKEN } = client.config;
     const guild = interaction.guild;
+    const rest = new REST({ version: "10" })
+    rest.setToken(TOKEN);
     // get the input (command name)
     const name = interaction.options.getString("name").toUpperCase();
     // get the type of the command guild/global
     const type = interaction.options.getString("type").toUpperCase();
     // get the command
-    const command = client.commands.get(name);
+    const command = client.commands.get(name.toLowerCase());
     console.log(command)
     if (!command) {
       return interaction.reply({

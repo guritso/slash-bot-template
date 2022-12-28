@@ -1,6 +1,4 @@
 const { REST, Routes } = require("discord.js");
-const { token } = require("../../Configs/config.js");
-const rest = new REST({ version: "10" }).setToken(token);
 
 module.exports = {
   data: {
@@ -34,7 +32,10 @@ module.exports = {
     ],
   },
   async execute(interaction, client) {
+    const { TOKEN } = client.config;
     const guild = interaction.guild;
+    const rest = new REST({ version: "10" });
+    rest.setToken(TOKEN);
     // get the type of the command guild/global
     const type = interaction.options.getString("type").toUpperCase();
     // get the input (command name)
