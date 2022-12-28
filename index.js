@@ -7,7 +7,7 @@ const client = new Client({
     status: "dnd",
   },
 });
-const ownerCmds = ["add", "delete"]
+const ownerCmds = ["add", "delete"];
 // interaction to response a command
 client.on("interactionCreate", async (inter) => {
   if (!inter.isChatInputCommand()) return;
