@@ -1,6 +1,6 @@
 module.exports = {
-  async execute(interaction, client) {
-    const commandName = interaction.commandName;
+  async execute(interaction) {
+    const { client, commandName } = interaction;
     const command = client.commands.get(commandName);
 
     if (!command) return;
