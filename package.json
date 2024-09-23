@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gurizenit/slash-bot-template.git"
+    "url": "git+https://github.com/guritso/slash-bot-template.git"
   },
   "keywords": [
     "v14",
@@ -26,7 +26,7 @@
   "author": "GuriZenit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gurizenit/slash-bot-template/issues"
+    "url": "https://github.com/guritso/slash-bot-template/issues"
   },
-  "homepage": "https://github.com/gurizenit/slash-bot-template#readme"
+  "homepage": "https://github.com/guritsot/slash-bot-template#readme"
 }
